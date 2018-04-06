@@ -1,0 +1,18 @@
+.list {
+    display: inline-block;
+    list-style-type: none;
+}
+
+.footer-back {
+    text-align: center;
+    background-color: #222222;
+    color: white;
+}
+
+.grey:link {
+    color: grey;
+}
+
+.grey:hover{
+    color: #c53015;
+}
