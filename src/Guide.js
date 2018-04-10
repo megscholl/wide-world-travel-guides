@@ -1,5 +1,6 @@
 import React from 'react';
-import { Card, CardImg, CardText, CardBody,CardTitle, CardSubtitle, Button } from 'reactstrap';
+import { Col, Card, CardTitle, CardText, CardDeck, CardSubtitle, CardBody }  from 'reactstrap';
+import './App.css';
 
 
 const Guide = [{
@@ -43,21 +44,26 @@ const Guide = [{
 
 
   function ShowGuides() {
-      let guide = Guide.map((book) => 
-      <div>
-        <h2 key={book.title}>{book.title}</h2>
-        <h3 key={book.type}>{book.type}</h3>
-        <h3 key={book.price}>{book.price}</h3>
-      </div>
-    );
+
     return(
-        <div>
-            <Card>
-                <CardBody>
-                    <CardTitle>New England Fall Guide</CardTitle>
-                    <CardText>{guide}</CardText>
-                </CardBody>
-            </Card>
+        <div className="d-flex flex-wrap container">
+        <CardDeck>
+            {Guide.map((book) => {
+                console.log(book);
+                return(
+                    <Col sm="4">
+                        <Card body inverse style={{ backgroundColor: '#C67458', borderColor: '#333' }}>
+                            <CardBody>
+                                <CardTitle><strong>{book.title}</strong></CardTitle>
+                                <CardSubtitle>{book.type}</CardSubtitle>
+                                <CardText>${book.price}</CardText>
+                            </CardBody>
+                        </Card>
+                    </Col>
+                ) 
+                }
+            )}
+            </CardDeck>
         </div>
     )
   };
