@@ -1,4 +1,5 @@
 import React from 'react';
+import { Card, CardImg, CardText, CardBody,CardTitle, CardSubtitle, Button } from 'reactstrap';
 
 
 const Guide = [{
@@ -51,8 +52,12 @@ const Guide = [{
     );
     return(
         <div>
-            <h1>New England Fall Guide</h1>
-            <div>{guide}</div>
+            <Card>
+                <CardBody>
+                    <CardTitle>New England Fall Guide</CardTitle>
+                    <CardText>{guide}</CardText>
+                </CardBody>
+            </Card>
         </div>
     )
   };
