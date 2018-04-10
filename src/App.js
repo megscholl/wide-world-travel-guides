@@ -4,6 +4,7 @@ import Head from './Header';
 import Body from './Body';
 import Footer from './Footer';
 import logo from './images/galaxy1.png';
+import newEnglandSites from './sites'
 
 class App extends Component {
   render() {
@@ -11,7 +12,7 @@ class App extends Component {
       <div className="App">
         <Head title="Wide World Travel, Inc" logo={logo} />
         <Body />
-        <Footer />
+        <Footer newEnglandSites={newEnglandSites}/>
       </div>
     );
   }
