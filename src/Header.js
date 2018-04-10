@@ -2,16 +2,16 @@ import React from 'react';
 import './App.css';
 import './index.css';
 
-function Header() {
+function Head(props) {
     
     return (
 
-    <header className="App-header">
+    <div className="App-header">
         {console.log("hey yooo")}
         {console.log("New England Autumn")}
-        <h1 className="App-title">Wide World Travel, Inc</h1>
-    </header>
+        <h1>{props.title}</h1>
+    </div>
     );
 }
 
-export default Header;
+export default Head;
