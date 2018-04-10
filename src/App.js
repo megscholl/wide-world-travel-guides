@@ -1,15 +1,18 @@
 import React, { Component } from 'react';
-import logo from './images/ne_autumn.jpg';
 import './App.css';
+import Head from './Header';
+import Body from './Body';
+import Footer from './Footer';
+import logo from './images/galaxy1.png';
+import newEnglandSites from './sites'
 
 class App extends Component {
   render() {
     return (
       <div className="App">
-        
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
+        <Head title="Wide World Travel, Inc" logo={logo} />
+        <Body />
+        <Footer newEnglandSites={newEnglandSites}/>
       </div>
     );
   }

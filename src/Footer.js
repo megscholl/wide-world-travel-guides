@@ -1,7 +1,8 @@
 import React from 'react';
 import './Footer.css';
+import './sites';
 
-function Footer() {
+function Footer(props) {
     
     return (
 
@@ -9,10 +10,10 @@ function Footer() {
                 <div>
                     <ul className="list">
                         <li>New England Sites to visit in the Fall:</li>
-                        <li><a href="http://www.mass.gov"  className="grey" target="_blank" rel="noopener noreferrer" alt="Massachusetts" title="Massachusetts">Massachusetts</a></li>
-                        <li><a href="http://www.nh.gov"  className="grey" target="_blank" rel="noopener noreferrer" alt="New Hampshire" title="New Hampshire">New Hampshire</a></li>
-                        <li><a href="http://www.ct.gov" className="grey" target="_blank" rel="noopener noreferrer" alt="Connecticut" title="Connecticut">Connecticut</a></li>
-                        <li><a href="http://www.ny.gov" className="grey" target="_blank" rel="noopener noreferrer" alt="New York" title="New York">New York</a></li>       
+                        <li><a href={props.newEnglandSites.mass}  className="grey" target="_blank" alt="Massachusetts" title="Massachusetts">Massachusetts</a></li>
+                        <li><a href={props.newEnglandSites.conn}  className="grey" target="_blank" alt="New Hampshire" title="New Hampshire">New Hampshire</a></li>
+                        <li><a href={props.newEnglandSites.newhamp} className="grey" target="_blank" alt="Connecticut" title="Connecticut">Connecticut</a></li>
+                        <li><a href={props.newEnglandSites.newyork} className="grey" target="_blank" alt="New York" title="New York">New York</a></li>       
                     </ul>
                 </div>
 
